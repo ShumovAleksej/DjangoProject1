@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Parent</th>
+      <th>Category</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for el in elements %}
+    <tr>
+      <th scope="row">{{ el.id }}</th>
+      <td>{{ el.parent_id }}</td>
+      <td>{{ el.category_id }}</td>
+      <td>{{ el.name }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="row">
+
+    <div class="product col-sm-4">
+        <div class="test1">ТЕСТ</div>
+        <script>
+        var d = document;
+        d.querySelector('.test1').addEventListener('click', function(){
+        d.querySelector('.test2').innerHTML = '<div class="test3">HELLO I YOUR NEW TEXT</div>';
+        }, false);
+
+
+
+        </script>
+    </div>
+
+    <div class="product col-sm-4 test2">
+        <div>I AM JUST A TEXT IN DIV</div>
+    </div>
+
+</div>
+
+</body>
+</html>

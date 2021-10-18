@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div>
+    <div class="product col-sm-4 menu">
+        {% for cat in main_list %}
+        <ul>{{ cat.main_parent.name }}
+            {% for child in cat.child_list %}
+
+            <script>
+            document.write('<li><a href="http://127.0.0.1:8000/cat/{{ child.category_id }}">_____{{ child.name }}</a></li>');
+            var d = document;
+            d.querySelector('.menu').addEventListener('click', function(){
+            d.querySelector('.tovari').innerHTML = '<div class="test3">1234142412</div>';
+            }, false);
+
+            </script>
+
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+
+
+
+    <div class="product col-sm-4 tovari">
+
+<!--        {% for t in tovars %}-->
+
+<!--        <h1>{{ t.name }}</h1>-->
+<!--        <img src="{{ t.picture }}">-->
+
+<!--        {% endfor %}-->
+
+    </div>
+</div>
+
+</body>
+</html>
