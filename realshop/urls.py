@@ -16,17 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from categories.views import render_app, load_categories_app, load_offers_app, read_json, qwery_app, menu_app,  \
-    update_categories_upp
-
+from categories.views import load_categories_app, load_offers_app, qwery_app, menu_app, \
+    update_categories_upp, boot_app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', render_app),
+    path('cat/<str:cat_id>/', menu_app),
+    path('', menu_app),
+    path('boot/', boot_app),
     path('loadcategories/', load_categories_app),
     path('loadoffers/', load_offers_app),
     path('updoff/', update_categories_upp),
-    path('readjson/', read_json),
-    path('cat/<str:cat_id>/', menu_app),
-    path('menu/', menu_app),
+
 ]

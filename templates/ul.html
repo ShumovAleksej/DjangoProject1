@@ -8,20 +8,22 @@
 </head>
 <body>
 
-<div>
+<div class="row">
     <div class="product col-sm-4 menu">
         {% for cat in main_list %}
         <ul>{{ cat.main_parent.name }}
             {% for child in cat.child_list %}
 
-            <script>
-            document.write('<li><a href="http://127.0.0.1:8000/cat/{{ child.category_id }}">_____{{ child.name }}</a></li>');
-            var d = document;
-            d.querySelector('.menu').addEventListener('click', function(){
-            d.querySelector('.tovari').innerHTML = '<div class="test3">1234142412</div>';
-            }, false);
+            <li><a href="http://127.0.0.1:8000/cat/{{ child.category_id }}">_____{{ child.name }}</a></li>
 
-            </script>
+<!--            <script>-->
+<!--            document.write('<li><a href="http://127.0.0.1:8000/cat/{{ child.category_id }}">_____{{ child.name }}</a></li>');-->
+<!--            var d = document;-->
+<!--            d.querySelector('.menu').addEventListener('click', function(){-->
+<!--            d.querySelector('.tovari').innerHTML = '<div class="test3">1234142412</div>';-->
+<!--            }, false);-->
+
+<!--            </script>-->
 
             {% endfor %}
         </ul>
@@ -29,15 +31,14 @@
     </div>
 
 
-
     <div class="product col-sm-4 tovari">
 
-<!--        {% for t in tovars %}-->
-
-<!--        <h1>{{ t.name }}</h1>-->
-<!--        <img src="{{ t.picture }}">-->
-
-<!--        {% endfor %}-->
+        {% for list_row in tovars %}
+            {% for prod in list_row %}
+        <h1>{{ prod.name }}</h1>
+        <img src="{{ prod.picture }}">
+            {% endfor %}
+        {% endfor %}
 
     </div>
 </div>
