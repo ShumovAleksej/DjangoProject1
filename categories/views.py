@@ -49,7 +49,7 @@ def menu_app(request, cat_id=''):
 
 
 def update_categories_upp(request):
-    all_prod = my_import.load_prod()
+    all_prod = unifunc.load_prod()
     for prod in all_prod:
         for offer in Offers.objects.filter(self_id=prod['id']):
             offer.update(picture=prod['picture'])
